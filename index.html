@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Painting</title>
+    <!-- cdn icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- This is scroll smooth from GitHub -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- fontawsome popins -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <!-- Css link -->
+    <link rel="stylesheet" href="paint.css" />
+
+    <!-- EmailJs cdn link -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Desktop menue -->
+      <nav class="container desktop__menu">
+        <!-- logo -->
+        <a href="index.html" class="logo">
+          <img src="./assets/Quality.png" alt="">
+        </a>
+        <ul class="menu__link">
+          <li class="menu__list">
+            <a href="#">HOME</a>
+          </li>
+          <li class="menu__list">
+            <a href="#service">SERVICE</a>
+          </li>
+          <li class="menu__list">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li class="menu__list">
+            <a href="galery.html">GALAY</a>
+          </li>
+          <li class="menu__list">
+            <a href="#" onclick="openModelForm()">CONTACT</a>
+          </li>
+        </ul>
+        <div class="social__media">
+          <i class="fa fa-tripadvisor"></i>
+
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa fa-grip-lines modal__open"></i>
+        </div>
+      </nav>
+      <!-- mobile menu -->
+      <nav class="mobile__menu">
+        <i class="modal__close">x</i>
+        <ul class="menu__link" onclick="">
+          <li class="menu__list">
+            <a href="#">HOME</a>
+          </li>
+          <li class="menu__list">
+            <a href="#">SERVICE</a>
+          </li>
+
+          <li class="menu__list">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li class="menu__list">
+            <a href="galery.html">GALARY</a>
+          </li>
+          <li class="menu__list">
+            <a href="index.html" onclick="openModelForm()">CONTACT</a>
+          </li>
+          <button class="reservation__btn" onclick="openModelForm()">
+            REQUEST QUOTE
+          </button>
+        </ul>
+        <h2 class="galary__title">GALARY</h2>
+        <div class="galary__container">
+          <div class="galary__items item1"></div>
+          <div class="galary__items item2"></div>
+          <div class="galary__items item3"></div>
+          <div class="galary__items item4"></div>
+          <div class="galary__items item5"></div>
+          <div class="galary__items item6"></div>
+        </div>
+      </nav>
+      <section class="hero">
+        <!-- <i class="fa fa-angle-left arraw"></i> <br />
+        <i class="fa fa-angle-right arraw--right"></i> -->
+        <div class="container hero__container">
+          <span class="subtitle">Exceptional Service</span>
+          <h2>
+            QUALITY WORK <br />
+            PAINTING ltd
+          </h2>
+          <button class="hero__btn" onclick="openModelForm()">
+            REQUEST QUOTE
+          </button>
+        </div>
+      </section>
+      <div class="mail myenvolope">
+        <a href="#">
+          <i class="fa fa-envelope" onclick="openModelForm()"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section id="feature">
+        <div class="title-text">
+          <p>FEATURES</p>
+          <br />
+          <br />
+          <h2 class="title-text--h2">WHY CHOOSE US !</h2>
+        </div>
+        <div class="fearure__container">
+          <div class="feature__content">
+            <div class="feature__icon">
+              <i class="fas fa-bolt fa"></i>
+            </div>
+            <h3 class="feature__subtitle">Easy and Quick</h3>
+            <p class="feature__pra">
+              Prioritizing simplicity and efficiency, ensuring a hassle-free
+              experience for our clients.
+            </p>
+          </div>
+
+          <div class="feature__content">
+            <div class="feature__icon">
+              <i class="fas fa-book-open fa"></i>
+            </div>
+            <h3 class="feature__subtitle">Expreienced</h3>
+            <p class="feature__pra">
+              We guarantee a flawless finish that endures the passage of time.
+            </p>
+          </div>
+
+          <div class="feature__content">
+            <div class="feature__icon">
+              <i class="fas fa-tags fa"></i>
+            </div>
+            <h3 class="feature__subtitle">affordable</h3>
+            <p class="feature__pra">
+              We strive to provide affordable services without compromising on
+              quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="service">
+        <div class="service__bacground--img">
+          <div class="service">
+            <span class="reusable__span">Discover Our</span>
+            <h2 class="service__title">SERVICE</h2>
+          </div>
+        </div>
+        <div class="service__card">
+          <div class="service__cards">
+            <img src="./assets/residen.avif" alt="" />
+            <span class="sub__title">Residential Painting </span>
+            <p>
+              We ha the expreince and skills neccessary to tackle just about
+              every type of job that comes our way.With Quality work Painting
+              Ltd., clients know exactly what to expect -professionalism,
+              effiency and exceptional result
+            </p>
+            <p class="more__info">
+              <em>Attention to Details</em> &nbsp;
+              <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+          <div class="service__cards">
+            <img src="./assets/comer.avif" alt="" />
+            <span class="sub__title">Commericial Painting </span>
+            <p>
+              Since its founding Quality Work painting Ltd has been one of the
+              most trusted names in the industry. Hire us for this service and
+              learn how we cater to the needs of each client.ensuring the
+              results you need and deserve.
+            </p>
+            <p class="more__info">
+              <em> Always Prepared</em> &nbsp;
+              <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+          <div class="service__cards">
+            <img src="./assets/interior.jpg" alt="" />
+            <span class="sub__title">Interior Painting</span>
+            <p>
+              At Quality Work Painting Ltd., we bring the experience and skills
+              necessary to handle any project that comes our way. Our clients
+              can always expect professionalism, efficiency, and exceptional
+              results.
+            </p>
+            <p class="more__info">
+              <em>Quality You Can Trust</em> &nbsp;
+              <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+
+          <div class="service__cards">
+            <img src="./assets/exterior.jpg" alt="" />
+            <span class="sub__title">Exterior Painting</span>
+            <p>
+              Quality Work Painting Ltd is committed to getting the job done
+              especially when it comes to this service. You can count on us to
+              be professional, timely,efficient and make sure you're satisfied
+              every step of the way
+            </p>
+            <p class="more__info">
+              <em>Expert Service</em> &nbsp;
+              <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about__content">
+          <span class="reusable__span">About Us</span>
+
+          <h3 class="about__subtitle">Reliable & Honest</h3>
+          <p>
+            Over the years, We've learned that greatest service begins and
+            endureswith expreinced Service and friendly professionalism. Quality
+            Work Painting Ltd finishes each project on schedule and with highest
+            level of quality service. Competitive rates and customer
+            satisfaction is what we're Always striving to meet and exceed
+            expectations.
+          </p>
+          <br />
+        </div>
+        <h4 class="clent_-msg">What client say Our Services</h4>
+        <div class="client__container">
+          <!-- <h2> What Clients Say About Our Services </h2> -->
+          <div class="client__content container">
+            <div class="siingle__client">
+              <div class="client__img">
+                <img src="./assets/undraw_male_avatar_g98d.svg" alt="" />
+              </div>
+              <p class="client__name">David</p>
+              <div class="client__description">
+                <p>
+                  "I hired Quality Work Painting for a painting project, and I'm
+                  thrilled with the results! They transformed our living room
+                  with skill and attention to detail. Highly recommend their
+                  professional service!"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- second client -->
+          <div class="client__content container">
+            <div class="siingle__client">
+              <div class="client__img">
+                <img src="./assets/undraw_male_avatar_g98d.svg" alt="" />
+              </div>
+              <p class="client__name">Ranjit</p>
+              <div class="client__description">
+                <p>
+                  "Excellent job They painted our office efficiently and with
+                  great care. The place looks fantastic, and their team was a
+                  pleasure to work with."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- third client -->
+          <div class="client__content container">
+            <div class="siingle__client">
+              <div class="client__img">
+                <img src="./assets/undraw_male_avatar_g98d.svg" alt="" />
+              </div>
+              <p class="client__name">Fernado</p>
+              <div class="client__description">
+                <p>
+                  "Thank you, Quality Work Painting, for the outstanding work on
+                  our home exterior. The paint job is flawless, and they
+                  completed it on time as promised. Couldn't be happier with the
+                  service!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="footer__container">
+        <!-- first card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">Contact Us</h2>
+          <div class="social__icons">
+            <p>
+              <i class="fa fa-light fa-location-dot"></i>
+              Alberta, AB Edmonton
+            </p>
+
+            <p><i class="fa fa-phone"></i> (+1) 96 716 6879</p>
+            <p>
+              <i class="fa fa-envelope-open-text"> </i>
+              QulatyWorkPainting@.com
+            </p>
+          </div>
+          <h2 class="openning__times">OPENNING TIMES</h2>
+          <p>
+            09:30 AM - 11:00 PM <br />
+            Monday - Friday
+          </p>
+        </div>
+
+        <!-- second card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">LATEST BLOGS</h2>
+          <div class="social__icons">
+            <p>
+              <i class="fa-brands fa-twitter"></i>
+              <span class="red"> @colorlib</span> Activello is a good option. It
+              has a slider built into that displays
+              <span class="red">https://buff.ly/2zaSfAQ</span>
+            </p>
+            <br />
+
+            <p>21 Dec 2019</p>
+            <br />
+            <p>
+              <i class="fa-brands fa-twitter"></i>
+              <span class="red"> @colorlib</span> Activello is a good option. It
+              has a slider built into that displays
+              <span class="red">https://buff.ly/2zaSfAQ</span>
+            </p>
+          </div>
+          <br />
+          <p>21 Dec 2019</p>
+        </div>
+        <!-- third card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">GALERRY</h2>
+          <div class="galary__container">
+            <div class="galary__items item1"></div>
+            <div class="galary__items item2"></div>
+            <div class="galary__items item3"></div>
+            <div class="galary__items item4"></div>
+            <div class="galary__items item5"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="copyright__icons">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </p>
+        <!-- logo -->
+        <a href="paint.html" class="logo">
+          <img
+            src="./assets/Quality.png"
+            alt=""
+          />
+        </a>
+        <p class="copyright__text">
+          &#169; Copyright QualiyWorkPainting l.t.d 2019
+        </p>
+      </div>
+    </footer>
+    <!-- Update Form -->
+
+    <div id="formModel">
+      <div class="contents">
+        <div class="left-side">
+          <p class="left-side--title">
+            If you have any question or <br />
+            simply want to contact with us
+          </p>
+          <hr />
+          <p class="address--details">
+            <i class="fa fa-location-dot"></i>
+            <span> 10560 102 ST NW, Edmonton</span>
+          </p>
+          <p class="address--details">
+            <i class="fa fa-phone"></i>
+            <span>+7865338</span>
+          </p>
+
+          <p class="address--details">
+            <i class="fa fa-envelope"></i>
+            <span class="envo"> Qualiworkpainting@gmail.com</span>
+          </p>
+        </div>
+        <div class="right-side">
+          <i
+            class="fa-sharp fa-solid fa-xmark cancel__form"
+            onclick="cancelForm()"
+          ></i>
+
+          <h5 class="errorMsg">Send Us Message</h5>
+          <form id="contact__form">
+            <div class="input__box">
+              <input
+                id="name"
+                type="text"
+                class="user__input"
+                placeholder="Your name"
+              />
+              <!-- <span class="notNumber" onchange="isNotNumber()"></span> -->
+            </div>
+            <div class="input__box">
+              <input
+                id="email"
+                type="email"
+                class="user__input"
+                placeholder="@email.com"
+              />
+            </div>
+            <div class="input__box">
+              <textarea
+                id="message"
+                rows="10"
+                class="user__input"
+                placeholder="Your message"
+              ></textarea>
+              <!-- <span class="notNumber" onchange="isNotNumber()"></span> -->
+            </div>
+            <div class="button">
+              <button type="submit" class="form__btn">Send it my way</button>
+            </div>
+            <!-- <p id="isNumber" style="color: red; display: none;">Sorry, no numbers allowed in the form fields.</p> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="paint.js"></script>
+  </body>
+</html>

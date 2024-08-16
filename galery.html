@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galey Qualiy Work Painting</title>
+    <!-- cdn icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- This is scroll smooth from GitHub -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- fontawsome popins -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <!-- Css link -->
+     <link rel="stylesheet" href="paint.css">
+    <link rel="stylesheet" href="galery.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Desktop menue -->
+      <nav class="container desktop__menu">
+        <!-- logo -->
+        <a href="index.html" class="logo">
+          <img src="./assets/Quality.png" alt="">
+        </a>
+        <ul class="menu__link">
+          <li class="menu__list">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="menu__list noService">
+            <a href="#service">SERVICE</a>
+          </li>
+          <li class="menu__list noService">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li class="menu__list ">
+            <a href="galery.html">GALAY</a>
+          </li>
+          <li class="menu__list">
+            <a href="#" onclick="openModelForm()">CONTACT</a>
+          </li>
+        </ul>
+        <div class="social__media">
+          <i class="fa fa-tripadvisor"></i>
+
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa fa-grip-lines modal__open"></i>
+        </div>
+      </nav>
+      <div class="logo__social--media">
+        <a href="paint.html" class="logo">
+          <!-- <img src="./assets/Quality.png" alt=""> -->
+        </a>
+        <div class="social__media">
+          <i class="fa fa-tripadvisor"></i>
+
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa fa-grip-lines modal__open"></i>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <nav class="mobile__menu">
+        <i class="modal__close">x</i>
+        <ul class="menu__link" onclick="">
+          <li class="menu__list">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="menu__list noService">
+            <a href="#service">SERVICE</a>
+          </li>
+
+          <li class="menu__list noService">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li class="menu__list">
+            <a href="galery.html">GALARY</a>
+          </li>
+          <li class="menu__list">
+            <a href="#" onclick="openModelForm()">CONTACT</a>
+          </li>
+          <button class="reservation__btn" onclick="openModelForm()">
+            REQUEST QUOTE
+          </button>
+        </ul>
+        <h2 class="galary__title">GALARY</h2>
+        <div class="galary__container">
+          <div class="galary__items item1"></div>
+          <div class="galary__items item2"></div>
+          <div class="galary__items item3"></div>
+          <div class="galary__items item4"></div>
+          <div class="galary__items item5"></div>
+          <div class="galary__items item6"></div>
+        </div>
+      </nav>
+      <section class="hero">
+        <i class="fa fa-angle-left arraw"></i> <br />
+        <i class="fa fa-angle-right arraw--right"></i>
+        <div class="container hero__container">
+          <span class="subtitle">Our Latest Work</span>
+          <h2>
+            Our Recently <br />
+            Projects
+          </h2>
+          <button class="hero__btn" onclick="openModelForm()">
+            REQUEST QUOTE
+          </button>
+        </div>
+      </section>
+      <div class="mail myenvolope">
+        <a href="#">
+          <i class="fa fa-envelope" onclick="openModelForm()"></i>
+        </a>
+      </div>
+    </header>
+    <main class="main row">
+    
+      <div class="galery__container">
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery1.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery2.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery3.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery5.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery6.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery7.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery8.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 8th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery9.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 9th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery10.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- 10th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery11.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- 11th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery12.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 12th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery13.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 3th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery14.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 14th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery15.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 15th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery16.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 16th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery17.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 17th ,  18 couldn't fit here -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery19.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- 18th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery20.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- 19th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery21.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 20th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery22.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 21th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery23.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 22th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery28.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- 23th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery29.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- 24th -->
+        <div class="single__galery">
+          <figure>
+            <img src="./assets/galery30.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="footer__container">
+        <!-- first card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">Contact Us</h2>
+          <div class="social__icons">
+            <p>
+              <i class="fa fa-light fa-location-dot"></i>
+              Alberta, AB Edmonton
+            </p>
+
+            <p><i class="fa fa-phone"></i> (+1) 96 716 6879</p>
+            <p>
+              <i class="fa fa-envelope-open-text"> </i>
+              QulatyWorkPainting@.com
+            </p>
+          </div>
+          <h2 class="openning__times">OPENNING TIMES</h2>
+          <p>
+            09:30 AM - 11:00 PM <br />
+            Monday - Friday
+          </p>
+        </div>
+
+        <!-- second card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">LATEST BLOGS</h2>
+          <div class="social__icons">
+            <p>
+              <i class="fa-brands fa-twitter"></i>
+              <span class="red"> @colorlib</span> Activello is a good option. It
+              has a slider built into that displays
+              <span class="red">https://buff.ly/2zaSfAQ</span>
+            </p>
+            <br />
+
+            <p>21 Dec 2019</p>
+            <br />
+            <p>
+              <i class="fa-brands fa-twitter"></i>
+              <span class="red"> @colorlib</span> Activello is a good option. It
+              has a slider built into that displays
+              <span class="red">https://buff.ly/2zaSfAQ</span>
+            </p>
+          </div>
+          <br />
+          <p>21 Dec 2019</p>
+        </div>
+        <!-- third card -->
+        <div class="single__footer--content">
+          <h2 class="footer__content--titile">GALERRY</h2>
+          <div class="galary__container">
+            <div class="galary__items item1"></div>
+            <div class="galary__items item2"></div>
+            <div class="galary__items item3"></div>
+            <div class="galary__items item4"></div>
+            <div class="galary__items item5"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+            <div class="galary__items item6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="copyright__icons">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </p>
+        <!-- logo -->
+        <a href="paint.html" class="logo">
+          <img
+            src="./assets/Quality.png"
+            alt=""
+          />
+        </a>
+        <p class="copyright__text">
+          &#169; Copyright QualiyWorkPainting l.t.d 2019
+        </p>
+      </div>
+    </footer>
+      <!-- Update Form -->
+
+      <div id="formModel">
+        <div class="contents">
+          <div class="left-side">
+            <p class="left-side--title">
+              If you have any question or <br />
+              simply want to contact with us
+            </p>
+            <hr />
+            <p class="address--details">
+              <i class="fa fa-location-dot"></i>
+              <span> 10560 102 ST NW, Edmonton</span>
+            </p>
+            <p class="address--details">
+              <i class="fa fa-phone"></i>
+              <span>+7865338</span>
+            </p>
+  
+            <p class="address--details">
+              <i class="fa fa-envelope"></i>
+              <span class="envo"> Qualiworkpainting@gmail.com</span>
+            </p>
+          </div>
+          <div class="right-side">
+            <i
+              class="fa-sharp fa-solid fa-xmark cancel__form"
+              onclick="cancelForm()"
+            ></i>
+  
+            <h5 class="errorMsg">Send Us Message</h5>
+            <form id="contact__form">
+              <div class="input__box">
+                <input
+                  id="name"
+                  type="text"
+                  class="user__input"
+                  placeholder="Your name"
+                />
+                <!-- <span class="notNumber" onchange="isNotNumber()"></span> -->
+              </div>
+              <div class="input__box">
+                <input
+                  id="email"
+                  type="email"
+                  class="user__input"
+                  placeholder="@email.com"
+                />
+              </div>
+              <div class="input__box">
+                <textarea
+                  id="message"
+                  rows="10"
+                  class="user__input"
+                  placeholder="Your message"
+                ></textarea>
+                <!-- <span class="notNumber" onchange="isNotNumber()"></span> -->
+              </div>
+              <div class="button">
+                <button type="submit" class="form__btn">Send it my way</button>
+              </div>
+              <!-- <p id="isNumber" style="color: red; display: none;">Sorry, no numbers allowed in the form fields.</p> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    <script src="paint.js"></script>
+  </body>
+</html>

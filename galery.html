@@ -22,9 +22,10 @@
     <!-- Css link -->
      <link rel="stylesheet" href="paint.css">
     <link rel="stylesheet" href="galery.css" />
+    <script src="paint.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <!-- Desktop menue -->
       <nav class="container desktop__menu">
         <!-- logo -->
@@ -35,13 +36,13 @@
           <li class="menu__list">
             <a href="index.html">HOME</a>
           </li>
-          <li class="menu__list noService">
+          <li class="menu__list">
             <a href="#service">SERVICE</a>
           </li>
-          <li class="menu__list noService">
+          <li class="menu__list">
             <a href="#about">ABOUT</a>
           </li>
-          <li class="menu__list ">
+          <li class="menu__list">
             <a href="galery.html">GALAY</a>
           </li>
           <li class="menu__list">
@@ -56,37 +57,25 @@
           <i class="fa fa-grip-lines modal__open"></i>
         </div>
       </nav>
-      <div class="logo__social--media">
-        <a href="paint.html" class="logo">
-          <!-- <img src="./assets/Quality.png" alt=""> -->
-        </a>
-        <div class="social__media">
-          <i class="fa fa-tripadvisor"></i>
-
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa fa-grip-lines modal__open"></i>
-        </div>
-      </div>
       <!-- mobile menu -->
       <nav class="mobile__menu">
         <i class="modal__close">x</i>
         <ul class="menu__link" onclick="">
           <li class="menu__list">
-            <a href="index.html">HOME</a>
+            <a href="#">HOME</a>
           </li>
-          <li class="menu__list noService">
-            <a href="#service">SERVICE</a>
+          <li class="menu__list">
+            <a href="#">SERVICE</a>
           </li>
 
-          <li class="menu__list noService">
+          <li class="menu__list">
             <a href="#about">ABOUT</a>
           </li>
           <li class="menu__list">
             <a href="galery.html">GALARY</a>
           </li>
           <li class="menu__list">
-            <a href="#" onclick="openModelForm()">CONTACT</a>
+            <a href="index.html" onclick="openModelForm()">CONTACT</a>
           </li>
           <button class="reservation__btn" onclick="openModelForm()">
             REQUEST QUOTE
@@ -103,13 +92,13 @@
         </div>
       </nav>
       <section class="hero">
-        <i class="fa fa-angle-left arraw"></i> <br />
-        <i class="fa fa-angle-right arraw--right"></i>
+        <!-- <i class="fa fa-angle-left arraw"></i> <br />
+        <i class="fa fa-angle-right arraw--right"></i> -->
         <div class="container hero__container">
-          <span class="subtitle">Our Latest Work</span>
+          <span class="subtitle">Recent Work</span>
           <h2>
-            Our Recently <br />
-            Projects
+            QUALITY WORK <br />
+            PAINTING ltd
           </h2>
           <button class="hero__btn" onclick="openModelForm()">
             REQUEST QUOTE
@@ -122,6 +111,7 @@
         </a>
       </div>
     </header>
+
     <main class="main row">
     
       <div class="galery__container">
@@ -416,6 +406,6 @@
           </div>
         </div>
       </div>
-    <script src="paint.js"></script>
+     
   </body>
 </html>

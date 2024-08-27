@@ -1,3 +1,10 @@
+// Grap all variable needed
+let desktopMenue = document.querySelector('.desktop__menu');
+let mobile = document.querySelector('.mobile__menu');
+let openMobile = document.querySelector('.modal__open');
+let closeMobile = document.querySelector('.modal__close');
+let mobileElement = document.querySelector('.menu__link')
+let ancherTags = document.getElementsByTagName('a');
 function changeColor() {
    let desktopMenue = document.querySelector('.desktop__menu');
    let scrollValue = window.scrollY;
@@ -13,12 +20,7 @@ function changeColor() {
 }
 window.addEventListener('scroll', changeColor);
 
-// Grap all variable needed
-let mobile = document.querySelector('.mobile__menu');
-let openMobile = document.querySelector('.modal__open');
-let closeMobile = document.querySelector('.modal__close');
-let mobileElement = document.querySelector('.menu__link')
-let ancherTags = document.getElementsByTagName('a');
+
 for(let i =0;i < ancherTags.length;i++){
    ancherTags[i].addEventListener('click',function(e){
       if(ancherTags){
@@ -27,6 +29,13 @@ for(let i =0;i < ancherTags.length;i++){
       }
    })
 }
+openMobile.addEventListener('click',function(e) {
+  if(openMobile) {
+     mobile.style.display = 'block';
+     
+  }
+
+})
 
 closeMobile.addEventListener('click',function(e) {
   if(closeMobile) {
@@ -36,12 +45,7 @@ closeMobile.addEventListener('click',function(e) {
 })
 
 
-openMobile.addEventListener('click',function(e) {
-    if(openMobile) {
-       mobile.style.display = 'block';
-    }
-  
-  })
+
 
 
 
@@ -59,11 +63,11 @@ let errorMessage = document.querySelector(".errorMsg")
 let successMsg = document.querySelector(".successMsg");
 
 form.addEventListener("submit", function (event) {
-  if (!formValidation(event)) {
+  if (formValidation(event)) {
     event.preventDefault();
 
   }
- console.log("hello");
+ 
 }
 
 );
@@ -90,6 +94,7 @@ emailjs.send(serviceID,templateID,inputFields).then(
 )
 
   /* Preventing  submission if  the form is empty*/
+ 
   if (userName.value === "" || userEmail.value === "" || userMessage.value === "") {
     errorMessage.innerHTML = "All fields are required 👇🏽";
     errorMessage.style.color = "red"
@@ -129,6 +134,7 @@ let Form__content = document.getElementById('formModel');
 function openModelForm() {
   if (Form__content) {
     Form__content.style.display = 'block';
+    desktopMenue.style.background ="white"
     mobile__menu.style.display = 'none';
     console.log('model-form is visible');
   } else {
@@ -142,6 +148,7 @@ function cancelForm() {
 
   if (Form__content) {
     Form__content.style.display = "none";
+     desktopMenue.style.background ="#3f3f46"
    //  hamburger.style.display ="flex";
     // sections .style.display = "block";
     // hero.style.display = "block";

@@ -51,7 +51,8 @@ closeMobile.addEventListener('click',function(e) {
 
 //  form validation
 
-
+let logo = document.querySelector(".logo");
+let hero = document.querySelector(".hero");
 let form = document.getElementById("contact__form");
 let submitButton = document.querySelector(".form__btn")
 let mobile__menu = document.querySelector(".mobile__menu")
@@ -61,7 +62,7 @@ let userEmail = document.getElementById("email");
 // let messageInput = document.querySelector(".user__message");
 let errorMessage = document.querySelector(".errorMsg")
 let successMsg = document.querySelector(".successMsg");
-
+let main = document.querySelector(".main");
 form.addEventListener("submit", function (event) {
   if (formValidation(event)) {
     event.preventDefault();
@@ -135,7 +136,10 @@ function openModelForm() {
   if (Form__content) {
     Form__content.style.display = 'block';
     desktopMenue.style.background ="white"
+    logo.style.display ='none';
+    hero.style.display ='none';
     mobile__menu.style.display = 'none';
+     main.style.display ='none';
     console.log('model-form is visible');
   } else {
     console.log('model-form is not visible');
@@ -149,6 +153,10 @@ function cancelForm() {
   if (Form__content) {
     Form__content.style.display = "none";
      desktopMenue.style.background ="#3f3f46"
+     logo.style.display ='block';
+     hero.style.display ='block';
+     main.style.display ='block'
+
    //  hamburger.style.display ="flex";
     // sections .style.display = "block";
     // hero.style.display = "block";

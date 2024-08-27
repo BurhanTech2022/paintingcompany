@@ -937,25 +937,31 @@ header {
     max-width: 75rem;
     padding-right: 4rem;
     flex-direction: column-reverse;
-    position: absolute;
-    top: 20px;
+    position: relative;
+   
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 80px;
+    bottom: 20rem;
     position: fixed;
     z-index: 111;
   }
 
   .right-side {
     width: 100%;
-    max-width: 450px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color:#3e3e44;
   }
   .left-side {
-    width: 100%;
+    display: none;
+    /* width: 100%;
     word-wrap: break-word;
     height: 100%;
     max-height: 200px;
-    font-size: 0.85rem;
+    font-size: 0.85rem; */
   }
   .left-side--title.left-side--title {
     margin-bottom: 5px;
@@ -979,6 +985,11 @@ header {
     margin: 0;
   }
   #contact__form {
+    width: 100%;
     padding-right: 5px;
+  }
+  .cancel__form{
+    right: 20px;
+    top:20px;
   }
 }

@@ -794,6 +794,9 @@ header {
   .hero {
     padding: 3rem 0;
   }
+  .hero__container h2{
+    width: 100%;
+  }
   .hero .subtitle {
     font-weight: 400;
   }

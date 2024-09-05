@@ -1,196 +1,329 @@
-// Grap all variable needed
-let desktopMenue = document.querySelector('.desktop__menu');
-let mobile = document.querySelector('.mobile__menu');
-let openMobile = document.querySelector('.modal__open');
-let closeMobile = document.querySelector('.modal__close');
-let mobileElement = document.querySelector('.menu__link')
-let ancherTags = document.getElementsByTagName('a');
-function changeColor() {
-   let desktopMenue = document.querySelector('.desktop__menu');
-   let scrollValue = window.scrollY;
-   if (scrollValue <=150) {
-      desktopMenue.classList.remove('navColor');
+// // Grap all variable needed
+// let desktopMenue = document.querySelector('.desktop__menu');
+// let mobile = document.querySelector('.mobile__menu');
+// let openMobile = document.querySelector('.modal__open');
+// let closeMobile = document.querySelector('.modal__close');
+// let mobileElement = document.querySelector('.menu__link')
+// let ancherTags = document.getElementsByTagName('a');
+// function changeColor() {
+//    let desktopMenue = document.querySelector('.desktop__menu');
+//    let scrollValue = window.scrollY;
+//    if (scrollValue <=150) {
+//       desktopMenue.classList.remove('navColor');
 
-   }
-   else {
-      desktopMenue.classList.add('navColor');
-      // console.log(scrollValue);
-   }
+//    }
+//    else {
+//       desktopMenue.classList.add('navColor');
+//       // console.log(scrollValue);
+//    }
 
-}
-window.addEventListener('scroll', changeColor);
+// }
+// window.addEventListener('scroll', changeColor);
 
 
-for(let i =0;i < ancherTags.length;i++){
-   ancherTags[i].addEventListener('click',function(e){
-      if(ancherTags){
-         mobile.style.display = 'none';
-         console.log(ancherTags[i]);
-      }
-   })
-}
-openMobile.addEventListener('click',function(e) {
-  if(openMobile) {
-     mobile.style.display = 'block';
+// for(let i =0;i < ancherTags.length;i++){
+//    ancherTags[i].addEventListener('click',function(e){
+//       if(ancherTags){
+//          mobile.style.display = 'none';
+//          console.log(ancherTags[i]);
+//       }
+//    })
+// }
+// openMobile.addEventListener('click',function(e) {
+//   if(openMobile) {
+//      mobile.style.display = 'block';
      
-  }
+//   }
 
-})
+// })
 
-closeMobile.addEventListener('click',function(e) {
-  if(closeMobile) {
-     mobile.style.display = 'none';
-  }
+// closeMobile.addEventListener('click',function(e) {
+//   if(closeMobile) {
+//      mobile.style.display = 'none';
+//   }
 
-})
-
-
+// })
 
 
 
 
-//  form validation
-let header = document.querySelector('.header');
-let logo = document.querySelector(".logo");
-let hero = document.querySelector(".hero");
-let mainSection = document.getElementById("main")
-let form = document.getElementById("contact__form");
-let submitButton = document.querySelector(".form__btn")
-let mobile__menu = document.querySelector(".mobile__menu")
-let userName = document.getElementById("name");
-let userEmail = document.getElementById("email");
- let userMessage = document.getElementById("message");
-// let messageInput = document.querySelector(".user__message");
-let errorMessage = document.querySelector(".errorMsg")
-let successMsg = document.querySelector(".successMsg");
-// let main = document.querySelector(".main");
-form.addEventListener("submit", function (event) {
-  if (formValidation(event)) {
-    event.preventDefault();
 
-  }
+
+// //  form validation
+// let header = document.querySelector('.header');
+// let logo = document.querySelector(".logo");
+// let hero = document.querySelector(".hero");
+// let mainSection = document.getElementById("main")
+// let form = document.getElementById("contact__form");
+// let submitButton = document.querySelector(".form__btn")
+// let mobile__menu = document.querySelector(".mobile__menu")
+// let userName = document.getElementById("name");
+// let userEmail = document.getElementById("email");
+//  let userMessage = document.getElementById("message");
+// // let messageInput = document.querySelector(".user__message");
+// let errorMessage = document.querySelector(".errorMsg")
+// let successMsg = document.querySelector(".successMsg");
+// // let main = document.querySelector(".main");
+// form.addEventListener("submit", function (event) {
+//   if (formValidation(event)) {
+//     event.preventDefault();
+
+//   }
  
-}
+// }
 
-);
+// );
 
-function formValidation(event) {
-  event.preventDefault(); // Prevent the form from submitting
+// function formValidation(event) {
+//   event.preventDefault(); // Prevent the form from submitting
 
-  const puplicKey ="B9W97OfRZFVjjRzok";
-  const serviceID = "service_t78x73u";
-  const templateID = "template_xzgdodn";
+//   const puplicKey ="B9W97OfRZFVjjRzok";
+//   const serviceID = "service_t78x73u";
+//   const templateID = "template_xzgdodn";
 
-//initialize email js with public key
+// //initialize email js with public key
 
-emailjs.init(puplicKey);
-const inputFields = {
+// emailjs.init(puplicKey);
+// const inputFields = {
       
-  name: userName.value,
-  email : userEmail.value,
-  message : userMessage.value,
+//   name: userName.value,
+//   email : userEmail.value,
+//   message : userMessage.value,
 
- }
-emailjs.send(serviceID,templateID,inputFields).then(
+//  }
+// emailjs.send(serviceID,templateID,inputFields).then(
 
-)
+// )
 
-  /* Preventing  submission if  the form is empty*/
+//   /* Preventing  submission if  the form is empty*/
  
-  if (userName.value === "" || userEmail.value === "" || userMessage.value === "") {
-    errorMessage.innerHTML = "All fields are required 👇🏽";
-    errorMessage.style.color = "red"
-    submitButton.disabled = "true";
-    submitButton.style.cursor = "not-allowed";
-    // setTimeout(function () {
-    //   cancelForm();
-    // }, 2500)
-  } else {
-    errorMessage.innerHTML = "Your Message is successfully sent";
-    errorMessage.style.color = "green";
-    submitButton.disabled = "true";
-    submitButton.style.cursor = "not-allowed";
-     setTimeout(function(){
-      cancelForm();
-    }, 3500)
-  }
+//   if (userName.value === "" || userEmail.value === "" || userMessage.value === "") {
+//     errorMessage.innerHTML = "All fields are required 👇🏽";
+//     errorMessage.style.color = "red"
+//     submitButton.disabled = "true";
+//     submitButton.style.cursor = "not-allowed";
+//     // setTimeout(function () {
+//     //   cancelForm();
+//     // }, 2500)
+//   } else {
+//     errorMessage.innerHTML = "Your Message is successfully sent";
+//     errorMessage.style.color = "green";
+//     submitButton.disabled = "true";
+//     submitButton.style.cursor = "not-allowed";
+//      setTimeout(function(){
+//       cancelForm();
+//     }, 3500)
+//   }
    
 
   
 
     
-  let name = userName.value; // Get the value of the input field
-  let email = userEmail.value;
-  let message = userMessage.value
-  console.log(name); // Log the input value
-  console.log(email); // Log the input value
-  console.log(message); // Log the input value
-  form.reset(); // Clear the entire form
+//   let name = userName.value; // Get the value of the input field
+//   let email = userEmail.value;
+//   let message = userMessage.value
+//   console.log(name); // Log the input value
+//   console.log(email); // Log the input value
+//   console.log(message); // Log the input value
+//   form.reset(); // Clear the entire form
   
-}
+// }
 
-//Opening the model-form
+// //Opening the model-form
 
-let Form__content = document.getElementById('formModel');
+// let Form__content = document.getElementById('formModel');
 
-function openModelForm() {
-  if (Form__content) {
-    Form__content.style.display = 'block';
-    desktopMenue.style.background ="#3f3f48"
+// function openModelForm() {
+//   if (Form__content) {
+//     Form__content.style.display = 'block';
+//     desktopMenue.style.background ="#3f3f48"
   
-    hero.style.display ='none';
-    mobile__menu.style.display = 'none';
-     mainSection.style.display ='none';
-    console.log('model-form is visible');
-  } else {
-    console.log('model-form is not visible');
-  }
-}
-
-
-//Cance model-form
-function cancelForm() {
-
-  if (Form__content) {
-    Form__content.style.display = "none";
-     desktopMenue.style.background ="#3f3f46"
-     logo.style.display ='block';
-     hero.style.display ='block';
-     mainSection.style.display ='block'
-
-   //  hamburger.style.display ="flex";
-    // sections .style.display = "block";
-    // hero.style.display = "block";
-    // errormessage should disappear when the form is closed
-    form.reset();
-    // window.location.reload(true);
-    errorMessage.innerHTML = "Send us a message"
-    errorMessage.style.color = "blue"
-
-
-    console.log('Cancelled');
-  } else {
-    console.log('Form container not found');
-  }
-}
-
-// const goingService = document.querySelector('.service')
-// goingService.addEventListener('click', (e) => {
-//   let isVisible = navMenu.getAttribute('data-visible');
-//   if (isVisible == "true") {
-//     //Qari
-//     navMenu.setAttribute('data-visible', 'false');
-//     icons[0].setAttribute('data-visible', 'true');
-//     icons[1].setAttribute('data-visible', 'false');
-
-//   } else if (isVisible == "false") {
-//     //soo bandhig;
-//     navMenu.setAttribute('data-visible', 'true');
-
+//     hero.style.display ='none';
+//     mobile__menu.style.display = 'none';
+//      mainSection.style.display ='none';
+//     console.log('model-form is visible');
+//   } else {
+//     console.log('model-form is not visible');
 //   }
-// })
-// All animations will take exactly 500ms
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-}); 
+// }
+
+
+// //Cance model-form
+// function cancelForm() {
+
+//   if (Form__content) {
+//     Form__content.style.display = "none";
+//      desktopMenue.style.background ="#3f3f46"
+//      logo.style.display ='block';
+//      hero.style.display ='block';
+//      mainSection.style.display ='block'
+
+//    //  hamburger.style.display ="flex";
+//     // sections .style.display = "block";
+//     // hero.style.display = "block";
+//     // errormessage should disappear when the form is closed
+//     form.reset();
+//     // window.location.reload(true);
+//     errorMessage.innerHTML = "Send us a message"
+//     errorMessage.style.color = "blue"
+
+
+//     console.log('Cancelled');
+//   } else {
+//     console.log('Form container not found');
+//   }
+// }
+
+// // const goingService = document.querySelector('.service')
+// // goingService.addEventListener('click', (e) => {
+// //   let isVisible = navMenu.getAttribute('data-visible');
+// //   if (isVisible == "true") {
+// //     //Qari
+// //     navMenu.setAttribute('data-visible', 'false');
+// //     icons[0].setAttribute('data-visible', 'true');
+// //     icons[1].setAttribute('data-visible', 'false');
+
+// //   } else if (isVisible == "false") {
+// //     //soo bandhig;
+// //     navMenu.setAttribute('data-visible', 'true');
+
+// //   }
+// // })
+// // All animations will take exactly 500ms
+// var scroll = new SmoothScroll('a[href*="#"]', {
+//   speed: 1000,
+//   speedAsDuration: true,
+// }); 
+
+if (window.location.pathname.includes('galery.html')) {
+  // Specific code for galary.html
+}
+
+
+// Grab all variables needed
+const desktopMenu = document.querySelector('.desktop__menu');
+const mobileMenu = document.querySelector('.mobile__menu');
+const openMobile = document.querySelector('.modal__open');
+const closeMobile = document.querySelector('.modal__close');
+const anchorTags = document.getElementsByTagName('a');
+const form = document.getElementById("contact__form");
+const submitButton = document.querySelector(".form__btn");
+const userName = document.getElementById("name");
+const userEmail = document.getElementById("email");
+const userMessage = document.getElementById("message");
+const errorMessage = document.querySelector(".errorMsg");
+const hero = document.querySelector(".hero");
+const mainSection = document.getElementById("main");
+const logo = document.querySelector(".logo");
+const FormContent = document.getElementById('formModel');
+
+// Change menu color on scroll
+function changeColor() {
+   const scrollValue = window.scrollY;
+   if (scrollValue <= 150) {
+      desktopMenu.classList.remove('navColor');
+   } else {
+      desktopMenu.classList.add('navColor');
+   }
+}
+window.addEventListener('scroll', changeColor);
+
+// Handle menu link clicks
+Array.from(anchorTags).forEach(anchor => {
+   anchor.addEventListener('click', () => {
+      if (mobileMenu) {
+         mobileMenu.style.display = 'none';
+      }
+   });
+});
+
+// Handle mobile menu toggling
+if (openMobile) {
+   openMobile.addEventListener('click', () => {
+      mobileMenu.style.display = 'block';
+   });
+}
+
+if (closeMobile) {
+   closeMobile.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+   });
+}
+
+// Form validation and submission
+form.addEventListener("submit", (event) => {
+   if (formValidation(event)) {
+      event.preventDefault();
+   }
+});
+
+function formValidation(event) {
+   event.preventDefault(); // Prevent the form from submitting
+
+   const publicKey = "B9W97OfRZFVjjRzok";
+   const serviceID = "service_t78x73u";
+   const templateID = "template_xzgdodn";
+
+   emailjs.init(publicKey);
+
+   const inputFields = {
+      name: userName.value,
+      email: userEmail.value,
+      message: userMessage.value,
+   };
+
+   if (userName.value === "" || userEmail.value === "" || userMessage.value === "") {
+      errorMessage.innerHTML = "All fields are required 👇🏽";
+      errorMessage.style.color = "red";
+      submitButton.disabled = true;
+      submitButton.style.cursor = "not-allowed";
+   } else {
+      emailjs.send(serviceID, templateID, inputFields)
+         .then(() => {
+            errorMessage.innerHTML = "Your Message is successfully sent";
+            errorMessage.style.color = "green";
+            submitButton.disabled = true;
+            submitButton.style.cursor = "not-allowed";
+            setTimeout(cancelForm, 3500);
+         })
+         .catch(error => {
+            console.error('Error sending message:', error);
+            errorMessage.innerHTML = "An error occurred, please try again.";
+            errorMessage.style.color = "red";
+         });
+
+      form.reset(); // Clear the entire form
+   }
+
+   return false; // Ensure form submission is prevented
+}
+
+// Open and close form modal
+function openModelForm() {
+   if (FormContent) {
+      FormContent.style.display = 'block';
+      desktopMenu.style.background = "#3f3f48";
+      hero.style.display = 'none';
+      mobileMenu.style.display = 'none';
+      mainSection.style.display = 'none';
+   }
+}
+
+function cancelForm() {
+   if (FormContent) {
+      FormContent.style.display = "none";
+      desktopMenu.style.background = "#3f3f46";
+      logo.style.display = 'block';
+      hero.style.display = 'block';
+      mainSection.style.display = 'block';
+      errorMessage.innerHTML = "Send us a message";
+      errorMessage.style.color = "blue";
+      form.reset();
+   }
+}
+
+// Smooth scrolling
+new SmoothScroll('a[href*="#"]', {
+   speed: 1000,
+   speedAsDuration: true,
+});

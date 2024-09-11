@@ -60,9 +60,9 @@ form.addEventListener("submit", (event) => {
 function formValidation(event) {
    event.preventDefault(); // Prevent the form from submitting
 
-   const publicKey = "B9W97OfRZFVjjRzok";
-   const serviceID = "service_t78x73u";
-   const templateID = "template_xzgdodn";
+   const publicKey = "B9W97OfRZFVjjRzok";  
+   const serviceID =  "service_6fvo9l8";
+   const templateID =  "template_gsperrs"
 
    emailjs.init(publicKey);
 
@@ -88,7 +88,7 @@ function formValidation(event) {
          })
          .catch(error => {
             console.error('Error sending message:', error);
-            errorMessage.innerHTML = "An error occurred, please try again.";
+            errorMessage.innerHTML = "The Server is not available now, please Send your info qualityworkpainting@gmail.com.";
             errorMessage.style.color = "red";
          });
 

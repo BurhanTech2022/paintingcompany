@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: center;
     transition: scale 300ms ease;
+    margin-top: 8px;
   }
   .recent{text-align: center;font: 1.85rem; margin-bottom: 18px;}
 .single__galery{
